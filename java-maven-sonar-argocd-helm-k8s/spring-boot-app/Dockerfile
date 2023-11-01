@@ -8,6 +8,8 @@ ARG artifact=target/spring-boot-web.jar
 WORKDIR /opt/app
 
 COPY ${artifact} app.jar
+# mapping port 9100
+PORT 9100 
 
 # This should not be changed
 ENTRYPOINT ["java","-jar","app.jar"]
