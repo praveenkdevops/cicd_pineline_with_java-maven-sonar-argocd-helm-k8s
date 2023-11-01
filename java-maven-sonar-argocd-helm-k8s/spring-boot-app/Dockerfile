@@ -2,11 +2,11 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /opt/app
 
 # Copy the compiled JAR file from your local machine to the container
 COPY target/your-spring-boot-app.jar app.jar
-
+ARG artifact=target/spring-boot-web.jar
 # Expose the port that your application uses
 EXPOSE 9100
 
